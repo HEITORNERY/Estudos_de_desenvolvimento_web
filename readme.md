@@ -17,6 +17,6 @@ Espero que este repositório seja útil para estudantes e desenvolvedores intere
 
 1. **Clonar o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   https://github.com/HEITORNERY/Estudos_de_desenvolvimento_web.git
 2. **Executando cada código HTML**:
     Dê um duplo clique sobre o arquivo desejado e ele deve ser aberto no seu navegador padrão.
