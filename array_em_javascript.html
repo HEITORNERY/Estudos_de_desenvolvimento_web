@@ -1,0 +1,91 @@
+<html>
+     <head>
+          <!--Para uma fonte web use o @font-space-->
+          <!--Agora para baixar as fontes do navegador precisaremos criar uma referência a um link da web, onde esssa fontes podem ser baixadas-->
+          <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+          <!--Esse link tem as fontes Press Start 2P e a VT323 para serem baixadas em diferentes formatos como cursive e monospace-->
+          <style>
+              #Title_Font{
+                  font-family: 'Press Start 2P', cursive;
+                  color: red;
+              }   
+              #Text_Font{
+                  font-family: 'VT323', monospace;
+                  font-size: 34px;
+                  color: blue;
+              } 
+          </style>
+          <title>Praticando Javascript para criar uma calaculadora</title>
+     </head>
+     <body>
+          <h2 id="Title_Font">Calculadora criada com Javascript</h2>
+          <p id="Text_Font"> Você deve escolher a operação para realizar e fornecer os dados</p>
+          <p id="resultado">O resultado foi: </p>
+      </body>
+      <script type="text/javascript">
+          //Declaração do array 'numeros' sem tamanho definido e sem elementos atribuídos
+          var numeros = [ ];
+
+          //O primeiro elemento (o de índice 0) recebe o retorno da função que solicita o primeiro número
+          numeros[0] = soliticaPrimeiroNumero();
+
+          //O segundo elemento (o de índice 1) recebe o retorno da função que solicita o segundo número
+          numeros[1] = soliticaSegundoNumero();
+
+          //Declaração de atribuição de valor à variável que armazenará o resultado da divisão
+          //O resultado da divisão virá da função 'divida' (essa função recebe como parâmetro o array 'numeros')
+          var resultadoDivisao = divida(numeros);
+
+          //Exibindo o resultado da divisão na tela
+          alert('O resultado da divisão é igual a: ' + resultadoDivisao);
+
+          // com o document.getElementById acesso um elemento do html com seu id
+          var valor_da_operacao = document.getElementById("resultado");
+          // com o innerHTML é inserido um valor nesse elemento
+          valor_da_operacao.innerHTML += numeros[2];
+
+          /*
+          Função Javascript
+          Esta função não recebe parâmetros
+          */
+          function soliticaPrimeiroNumero(){
+               //Declaração e atribuição de variável. Ela receberá o número inserido pelo usuário
+          var numero1 = prompt("Insira o primeiro número: ");
+               
+               //Condição para verificar se o número é positivo.
+               //Caso não, o retorno da função será chamar a própria função novamente.
+               // Esta operação será repetida até que um número válido seja inserido.
+               //Caso sim, retorna o valor inserido pelo usuário
+               if(numero1 < 0){
+                    alert("O número precisa ser inteiro e positivo");
+               
+                    //Este tipo de retorno, onde a própria função é chamada novamente, é conhecido como recursividade
+                    return soliticaPrimeiroNumero();
+          }else{
+                    return numero1;
+               }
+          }
+
+          function soliticaSegundoNumero(){
+               var numero2 = prompt("Insira o segundo número: ");
+
+               if(numero2 < 0){
+                    alert("O número precisa ser inteiro e positivo");
+                    return soliticaSegundoNumero();
+               }else{
+                    return numero2;
+               }
+          }
+
+          /*
+          Esta função recebe como parâmetro um array - que contém os 2 números que desejamos dividir
+          */
+          function divida(numeros){
+               //Os números a serem divididos são acessados através dos índices do array
+               numeros.push(numeros[0] / numeros[1]);
+               return numeros[2];
+          }
+          
+     </script>
+</html>
+

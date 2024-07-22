@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <!--Para uma fonte web use o @font-space-->
+        <!--Agora para baixar as fontes do navegador precisaremos criar uma referência a um link da web, onde esssa fontes podem ser baixadas-->
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+        <!--Esse link tem as fontes Press Start 2P e a VT323 para serem baixadas em diferentes formatos como cursive e monospace-->
+        <style>
+            #Title_Font{
+                font-family: 'Press Start 2P', cursive;
+                color: red;
+            }   
+            #Text_Font{
+                font-family: 'VT323', monospace;
+                font-size: 34px;
+                color: blue;
+            } 
+        </style>
+        <title>Praticando Javascript para criar uma calaculadora</title>
+    </head>
+    <body>
+        <h2 id="Title_Font">Calculadora criada com Javascript</h2>
+        <p id="Text_Font"> Você deve escolher a operação para realizar e fornecer os dados</p>
+        <p id="resultado">O resultado foi: </p>
+        <script type="text/javascript">
+            /* Função para obter o tipo da operação, os números e retorna o valor da operaçõ */
+            function calculadora(numero1, numero2, operacao){
+                var resultado;
+                switch(operacao){
+                    case "1": // 1 é adição
+                        resultado = numero1 + numero2;
+                        break;
+                    case "2": // 2 é subtração
+                        resultado = numero1 - numero2;
+                        break;
+                    case "3": // 3 é multiplicação
+                        resultado = numero1 * numero2;
+                        break;
+                    case "4": // 4 é divisão
+                        resultado = numero1 / numero2;
+                        break;
+                    default: // caso nenhuma operação seja selecionada vai retornar null
+                        alert("Operação Inválida!");
+                        return null;
+                }
+                return resultado;
+            }
+            // criar variáveis pros números informados pelo usuário e converter seus valores para float
+            var numero1 = parseFloat(prompt("Insira um número: "));
+            var numero2 = parseFloat(prompt("Insira um número: "));
+            // solicita a operação a ser realizada
+            // o \n salta uma linha
+            var operacao = prompt("Escolha a operação: \n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão");
+            // variável para chamar a função de calculadora
+            var calcular = calculadora(numero1, numero2, operacao);
+            // Exibir o valor da operação
+            if(calcular !== null){
+                alert('O resultado da operação é: ' + calcular);
+                // com o document.getElementById acesso um elemento do html com seu id
+                var valor_da_operacao = document.getElementById("resultado");
+                // com o innerHTML é inserido um valor nesse elemento
+                valor_da_operacao.innerHTML += calcular;
+            }
+        </script>
+    </body>
+</html>
