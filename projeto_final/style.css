@@ -29,3 +29,37 @@ button {
 button:hover {
     background-color: darkblue;
 }
+/*Criarei uma classe para a div centralizar seu conteúdo*/
+.center_div{
+    text-align: center;
+}
+/* Vou estilizar a foto de perfil da página com uma borda arredondada de cor verde e o tamanho vai ser de 150px por 150px*/
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid blue;
+}
+/* as imagens do rodapé terão tamanho de 20px por 20px e o conteúdo será do tipo flex e alinhado ao centro e um espaço de 20px e a distância entre o texto da imagem e a imagem será de 2px*/
+footer img{
+    width: 20px;
+    height: 20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    margin: 20px;
+    text-align: center;
+}
+footer p{
+    margin-top: 2px;
+}
+h1{
+    color: blue;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
