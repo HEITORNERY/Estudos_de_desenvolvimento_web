@@ -1,0 +1,63 @@
+/*Dentro de body vai ficar os atributos que serão modificados dentro da tag body, que é o corpo da página web*/
+body{
+    color: white;
+    background-color: black;
+    /*Mudarei a fonte do texto contido em body*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Agora vou estilizar os itens da lista adicionando um espaço entre eles, retirando a bolinha que aparece nos itens da lista e aplicando um layout flexível*/
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    /* Também vou alinhar os items da lista na vertical e dar uma distância do topo da página*/
+    align-items: center;
+    padding: 16px;
+}
+/*Como os itens levam a páginas web diferentes vou remover o sublinhado deles e deixar com a cor branca padrão dos textos do body*/
+a{
+    color: white;
+    text-decoration: none;
+}   
+/* Vou estilizar a foto de perfil da página com uma borda arredondada de cor verde e o tamanho vai ser de 150px por 150px*/
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid blue;
+}
+/*Criarei uma classe para a div centralizar seu conteúdo*/
+.center_div{
+    text-align: center;
+}
+/*Vou dar uma cor para o nome do autor da página*/
+h1{
+    color: blue;
+}
+/* as imagens do rodapé terão tamanho de 20px por 20px e o conteúdo será do tipo flex e alinhado ao centro e um espaço de 20px e a distância entre o texto da imagem e a imagem será de 2px*/
+footer img{
+    width: 20px;
+    height: 20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    margin: 20px;
+    text-align: center;
+}
+footer p{
+    margin-top: 2px;
+}
+/*a classe container vai separar o texto da borda*/
+.container{
+    padding: 0 50px;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*quando passar o mouse sobre os itens da barra de navegação vai mudar a cor para azul*/
+nav a:hover{
+    color: blue;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulaŕio para entrar em contato comigo</h1>
+        <form action="https://formsubmit.co/joseheitorneryviana@gmail.com" method="post">
+            <input type="text" name="name" placeholder="digite seu nome" required>
+            <input type="email" name="email" placeholder="digite seu email" required>
+            <textarea cols="30" rows="10" placeholder="insira o conteúdo da mensagem" required></textarea>
+            <button type="submit">Send</button>
+            <!--Isso daqui é o nome da mensagem, ou seja, o título da mensagem é Novo Contato!-->
+            <input type="hidden" name="_subject" value="Novo Contato!">
+            <!--Isso daqui é para que a mensagem não seja vista como spam-->
+            <input type="text" name="_honey" style="display:none">
+            <!--ESsa opção é para desabilitar o captcha-->
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
+</body>
+</html>
