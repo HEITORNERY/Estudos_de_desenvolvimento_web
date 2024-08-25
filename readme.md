@@ -24,4 +24,5 @@ Espero que este repositório seja útil para estudantes e desenvolvedores intere
 ## O Projeto Final
 Criei como desafio para garantir que aprendi sobre desenvolvimento web criar um website para falar sobre mim, sobre os projetos que desenvolvi e como entrar em contato comigo.
 Isso tudo está no Projeto Final.
+[Projeto Final](https://heitornery.github.io/Estudos_de_desenvolvimento_web/)
 
